@@ -1,0 +1,322 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: sans-serif;
+}
+
+/* navigasi */
+nav{
+	display: flex;
+	justify-content: space-around;
+	background-color: white;
+	padding: 20px 0;
+}
+
+/* Menu */
+.menu-togle{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+}
+
+.menu-togle span{
+	display: block;
+	width: 28px;
+	height: 3px;
+	background-color: black;
+	transition: all 0.9s;	
+}
+
+.menu-togle input{
+	position: absolute;
+	width: 40px;
+	height: 28px;
+	opacity: 0;
+	margin-left: -10px;
+	cursor: pointer;
+}
+
+
+
+
+.menu-togle span:nth-child(4){
+	transform-origin: 0 0;
+}
+
+/* Animasi */
+.menu-togle span:nth-child(2){
+	transform-origin: 0 0;
+}
+
+.menu-togle input:checked ~ span:nth-child(2){
+	transform: rotate(45deg) translate(-3px, -2px);
+
+}
+
+.menu-togle input:checked ~ span:nth-child(4){
+	transform: rotate(-45deg) translate(-2px, -2px);
+}
+
+.menu-togle input:checked ~ span:nth-child(3){
+	transform: scale(0);
+	opacity: 0; 
+}
+
+nav ul{
+	display: flex;
+	list-style: none;
+	width: 40%;
+	justify-content: space-between;
+}
+
+nav ul li a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+/* tablet */
+@media screen and(max-width: 768px){
+nav ul li a{
+	width: 60%;
+	}
+}
+
+/* handphone */
+@media screen and(max-width: 576px){
+	nav ul{
+		position: absolute;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+	}
+}
+
+/* Container */
+.container-home{
+	max-width: 80%;
+	margin: 100px auto;
+	display: flex;
+}
+
+.konten{
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.konten.foto img{
+	max-width: 600px; 
+}
+
+.konten.nama{
+	margin-top: 150px;
+}
+
+.konten.nama h4{
+	color: #3B589C;
+	font-weight: bold;
+	font-size: 45px; 
+	line-height: 61px;
+	align-items: center;
+	font-family: Roboto-Regular;
+}
+
+.konten.nama p{
+	color: black;
+	font-weight: bold;
+	font-size: 22px; 
+	line-height: 30px;
+	align-items: center;
+	padding-bottom: 30px; 
+	font-family: Roboto-Regular;	
+}
+
+.button3{
+	outline: none;
+	height: 40px; 
+	text-align: center;
+	width: 200px;
+	background: #3B589C;
+	border: 3px solid #3B589C;
+	color: #fff;
+	letter-spacing: 2px;
+	text-shadow: none;
+	font-size: 12px;
+	font-weight: 600;
+	border-radius: 20px; 
+}
+
+.button3:hover{
+	color: #3B589C;
+	background-color: white;
+}
+
+.button2{
+	outline: none;
+	height: 40px; 
+	text-align: center;
+	width: 200px;
+	background: #3B589C;
+	border: 3px solid #3B589C;
+	color: #fff;
+	letter-spacing: 2px;
+	text-shadow: none;
+	font-size: 12px;
+	font-weight: 600;
+	border-radius: 20px; 
+}
+
+.button2:hover{
+	color: #3B589C;
+	background-color: white;
+}
+
+.text-center{
+	font-family: Roboto-Regular;
+	font-weight: bold;
+}
+
+.p-b-20{
+	padding-bottom: 20px;
+}
+
+/* About */
+.about{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+/* Service */
+.services {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: #e0e0e0;
+}
+
+.services h1{
+	font-family: Roboto-regular;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.services .p1{
+	font-family: Roboto-Regular;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	text-align: center; 
+}
+
+.service-box{
+	background: #3B589C;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 10px; 
+}
+
+.service-box2{
+	background: #5252ff;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 10px; 
+}
+
+.service-box .icofont{
+	margin: 10px;
+	font-size: 20px;
+	color: white;
+}
+.service-box2 .icofont{
+	margin: 10px;
+	font-size: 20px;
+	color: white;
+}
+
+.service-box span{
+	font-family: Roboto-Regular;
+	color: #fff;
+	margin: 5px;
+	margin-top: 16px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.service-box2 span{
+	font-family: Roboto-Regular;
+	color: #fff;
+	margin: 5px;
+	margin-top: 16px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.service-box p{
+	font-family: Roboto-Regular;
+	color: #fff;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 20px;
+	font-size: 15px;
+	text-align: justify;
+}
+
+.service-box2 p{
+	font-family: Roboto-Regular;
+	color: #fff;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 20px;
+	font-size: 15px;
+	text-align: justify;
+}
+
+.service-box:hover{
+	background-color: #000;
+	color: #fff;
+	transition: 1s; 
+}
+
+.service-box2:hover{
+	background-color: #000;
+	color: #fff;
+	transition: 1s; 
+}
+
+.portofolio{
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.portofolio .p1{
+font-family: Roboto-Regular;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	text-align: center; 	
+}
+
+.workexp{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: #4141ff;
+
+}
+
+@font-face {
+font-family: Roboto-Regular
+src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+font-family: Roboto-Italic
+src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+font-family: Roboto-Bold 	
+src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+
+
